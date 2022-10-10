@@ -1,0 +1,45 @@
+Query: Create 3 new dojos
+=========================
+insert into dojos (name) Values ('Yamakasi');
+insert into dojos (name) Values ('Kobra Kai');
+insert into dojos (name) Values ('Mr. Miyagi');
+
+Query: Delete the 3 dojos you just created
+==========================================
+DELETE FROM dojos;
+
+Query: Create 3 more dojos
+==========================
+insert into dojos (name) Values ('Yamakasi');
+insert into dojos (name) Values ('Kobra Kai');
+insert into dojos (name) Values ('Mr. Miyagi');
+
+Query: Create 3 ninjas that belong to the first dojo
+====================================================
+insert into ninjas (first_name, last_name, age, dojo_id) Values ('Thomas', 'Train', '27', 9);
+insert into ninjas (first_name, last_name, age, dojo_id) Values ('Chloe', 'Gross', '34', 9);
+insert into ninjas (first_name, last_name, age, dojo_id) Values ('John', 'Smith', '45', 9);
+
+Query: Create 3 ninjas that belong to the second dojo
+=====================================================
+insert into ninjas (first_name, last_name, age, dojo_id) Values ('Jenny', 'Johnson', '31', 10);
+insert into ninjas (first_name, last_name, age, dojo_id) Values ('Jim', 'Gates', '22', 10);
+insert into ninjas (first_name, last_name, age, dojo_id) Values ('Alex', 'Bruce', '29', 10);
+
+Query: Create 3 ninjas that belong to the third dojo
+====================================================
+insert into ninjas (first_name, last_name, age, dojo_id) Values ('Bo', 'Jackson', '55', 11);
+insert into ninjas (first_name, last_name, age, dojo_id) Values ('Jerry', 'Rice', '40', 11);
+insert into ninjas (first_name, last_name, age, dojo_id) Values ('Betty', 'Boop', '35', 11);
+
+Query: Retrieve all the ninjas from the first dojo
+==================================================
+select * from ninjas where dojo_id=9;
+
+Query: Retrieve all the ninjas from the last dojo
+==================================================
+select * from ninjas where dojo_id=11;
+
+Query: Retrieve the last ninja's dojo
+=====================================
+select * from ninjas order by id desc limit 1;
